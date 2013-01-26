@@ -4,7 +4,7 @@
 
 import sys, os
 
-sys.path.append(os.path.abspath('../_exts/fabpot/sphinx-php'))
+sys.path.append(os.path.abspath('../_exts'))
 
 # adding PhpLexer
 from sphinx.highlighting import lexers
