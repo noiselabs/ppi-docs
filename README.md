@@ -1,7 +1,7 @@
 PPI Documentation
 =================
 
-The PPI Framework documentation for version 2.1+ (work in progress).
+The [PPI Framework](http://www.ppi.io/) documentation.
 
 [![Build Status](https://travis-ci.org/noiselabs/ppi-docs.png?branch=master)](https://travis-ci.org/noiselabs/ppi-docs)
 
@@ -35,7 +35,7 @@ The PPI2 documentation is hosted on GitHub:
 
 To submit a contribution, fork the official repository on GitHub and send a [Pull Request](https://help.github.com/articles/using-pull-requests).
 
-Like PPI Framework source code, the documentation repository is split into two branches: 2.1 for the current PPI 2.1.x release and master as the development branch for upcoming releases.
+Like PPI Framework source code, the documentation repository is split into three branches: 2.0 for the current PPI 2.0.x release, 2.1 for the current PPI 2.1.x release and master as the development branch for upcoming releases.
 
 Translations
 ------------
