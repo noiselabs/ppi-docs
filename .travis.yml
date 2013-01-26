@@ -1,0 +1,7 @@
+language: python
+
+before_script:
+  - sudo easy_install sphinx
+
+script:
+  - sh -c "make clean && make htmlstrict"
