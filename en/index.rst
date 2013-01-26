@@ -1,8 +1,14 @@
 PPI2 Documentation
 ==================
 
-.. toctree::
-    :maxdepth: 2
+The Book
+--------
 
-    getting_started
-    application
+In 7 short chapters (or less!) learn how to use PPI2 for your web projects.
+
+.. toctree::
+    :hidden:
+
+    book/index
+
+.. include:: /book/map.rst.inc
