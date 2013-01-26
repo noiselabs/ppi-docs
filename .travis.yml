@@ -2,7 +2,6 @@ language: python
 
 before_script:
   - sudo easy_install sphinx
-  - COMPOSER_ROOT_VERSION=dev-master composer --prefer-source --dev install
 
 script:
-  - sh -c "make clean && make htmlstrict"
+  - sh -c "make clean && make html"
