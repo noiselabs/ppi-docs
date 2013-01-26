@@ -1,7 +1,5 @@
-# Global configuration information used across all the
-# translations of documentation.
+# -*- coding: utf-8 -*-
 #
-
 import sys, os
 
 sys.path.append(os.path.abspath('../_exts'))
@@ -89,7 +87,11 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'pyramid'
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+if on_rtd:
+    html_theme = 'default'
+else:
+    html_theme = 'pyramid'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -126,12 +128,12 @@ html_last_updated_fmt = '%b %d, %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
-#html_use_smartypants = True
+html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-html_sidebars = {
- '**' : ['globaltoc.html', 'localtoc.html']
-}
+#html_sidebars = {
+# '**' : ['globaltoc.html', 'localtoc.html']
+#}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -158,7 +160,7 @@ html_show_copyright = True
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
 # base URL from which the finished HTML is served.
-#html_use_opensearch = ''
+html_use_opensearch = ''
 
 # This is the file name suffix for HTML files (e.g. ".xhtml").
 #html_file_suffix = None
