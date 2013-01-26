@@ -2,8 +2,14 @@
 # Inspired by the Makefile used by bazaar.
 # http://bazaar.launchpad.net/~bzr-pqm/bzr/2.3/
 
-PYTHON = python
-ES_HOST =
+# You can set these variables from the command line.
+SPHINXOPTS	=
+SPHINXBUILD   	= sphinx-build
+PAPER         	=
+BUILDDIR      	= _build
+
+PYTHON		= python
+ES_HOST 	=
 
 .PHONY: all clean html latexpdf epub htmlhelp website website-dirs
 
@@ -68,16 +74,16 @@ website-dirs:
 
 website: website-dirs html populate-index epub pdf
 	# Move HTML
-	$(foreach lang, $(LANGS), cp -r _build/html/$(lang) $(DEST)/$(lang);)
+	$(foreach lang, $(LANGS), cp -r $(BUILDDIR)/html/$(lang) $(DEST)/$(lang);)
 
 	# Move EPUB files
-	$(foreach lang, $(LANGS), cp -r _build/epub/$(lang)/*.epub $(DEST)/_downloads/$(lang) || true;)
+	$(foreach lang, $(LANGS), cp -r $(BUILDDIR)/epub/$(lang)/*.epub $(DEST)/_downloads/$(lang) || true;)
 
 	# Move PDF files
-	$(foreach lang, $(PDF_LANGS), [ -f _build/latex/$(lang)/*.pdf ] && cp -r _build/latex/$(lang)/*.pdf $(DEST)/_downloads/$(lang) || true;)
+	$(foreach lang, $(PDF_LANGS), [ -f $(BUILDDIR)/latex/$(lang)/*.pdf ] && cp -r $(BUILDDIR)/latex/$(lang)/*.pdf $(DEST)/_downloads/$(lang) || true;)
 
 clean:
-	rm -rf _build/*
+	rm -rf $(BUILDDIR)/*
 
 clean-website:
 	rm -rf $(DEST)/*
