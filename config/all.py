@@ -4,7 +4,7 @@
 
 import sys, os
 
-sys.path.append(os.path.abspath('../vendor/fabpot/sphinx-php'))
+sys.path.append(os.path.abspath('../_exts/fabpot/sphinx-php'))
 
 # adding PhpLexer
 from sphinx.highlighting import lexers
@@ -62,7 +62,7 @@ release = '2.1.0'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', 'themes']
+exclude_patterns = ['_build', '_exts', 'themes']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
