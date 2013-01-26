@@ -3,6 +3,8 @@ PPI Documentation
 
 The PPI Framework documentation for version 2.1+ (work in progress).
 
+[![Build Status](https://travis-ci.org/noiselabs/ppi-docs.png?branch=master)](https://travis-ci.org/noiselabs/ppi-docs)
+
 Documentation Format
 --------------------
 
