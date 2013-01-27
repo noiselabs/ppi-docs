@@ -1,5 +1,5 @@
-PPI2 Documentation
-==================
+PPI Framework
+============================
 
 `PPI`_ is an open source `PHP`_ meta-framework.
 
