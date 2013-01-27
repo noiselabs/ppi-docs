@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'PPI Framework'
-copyright = u'2012-2013, PPI Framework'
+copyright = u'2012-2013, Paul Dragoonis. All rights reserved'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -89,17 +89,25 @@ pygments_style = 'sphinx'
 # a list of builtin themes.
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
-    html_theme = 'default'
+    #html_theme = 'default'
+    html_theme = 'ppi'
 else:
-    html_theme = 'nature'
+    html_theme = 'ppi'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+    'analytics_code': 'UA-20964741-1',
+    'github_user': 'noiselabs',
+    'github_repo': 'ppi-docs',
+    'twitter_username': 'ppi_framework',
+    'home_url': 'http://ppi.io',
+    'disqus_shortname': 'ppiframework',
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ['../themes']
+html_theme_path = ['../_themes']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -110,7 +118,7 @@ html_theme_path = ['../themes']
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = '../_static/Ppi-framework-logo.png'
+#html_logo = '../_static/Ppi-framework-logo.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
